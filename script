@@ -1,0 +1,13 @@
+spawn(function()
+while wait() do
+sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",99999999999)
+end
+end)
+for i,v in pairs(game.Workspace:GetDescendants()) do
+if(v:IsA("BasePart")) then
+if(v.Anchored == false) then
+    v.CFrame = CFrame.new(9e9,9e9,9e9)
+    wait()
+end
+end
+end
